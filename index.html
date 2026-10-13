@@ -61,6 +61,11 @@ nav{display:flex;gap:22px;align-items:center}nav a{color:#E5EDF7;text-decoration
 /* hero */
 .hero{padding:56px 0 64px;color:#fff}.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
 .hero p.lead{font-size:1.1rem;margin:18px 0 26px;max-width:540px;color:var(--mut)}
+/* NEW: benefit points shown directly under the lead paragraph */
+.points{list-style:none;padding:0;margin:0 0 26px;max-width:560px;display:grid;gap:10px}
+.points li{position:relative;padding-left:28px;color:var(--mut);font-size:1.05rem;line-height:1.5}
+.points li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--cyan);font-weight:800}
+.points b{color:#fff;font-weight:700}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .pdfl{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--mut);font-size:.92rem;text-decoration:underline;text-underline-offset:3px}
 .pdfl:hover{color:var(--cyan)}
@@ -128,7 +133,8 @@ footer .w{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between
  .hero{padding:32px 0 44px}
  .hg{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
  .hero h1{font-size:clamp(2rem,3.7vw,3rem)}
- .hero p.lead{margin:14px 0 22px}
+ .hero p.lead{margin:14px 0 16px}
+ .points{margin:0 0 22px}
  .fc{padding:20px 26px 18px}
  .fc h2{margin-bottom:6px}.fc p{margin-bottom:6px}
  .fc label{margin:8px 0 3px}
@@ -151,7 +157,8 @@ footer .w{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between
  .hg{display:flex;flex-direction:column;align-items:stretch;gap:0}
  .fc{width:100%}
  .hg>div:first-child{display:contents}
- .hg h1,.hero p.lead,.cta,.pdfl{order:1}
+ /* .points added here so the list stays under the lead paragraph on mobile */
+ .hg h1,.hero p.lead,.points,.cta,.pdfl{order:1}
  .pdfl{align-self:flex-start}
  .fc{order:2;margin-top:26px}
  .trust{order:3;margin-top:30px}
@@ -183,6 +190,12 @@ footer .w{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between
 <div>
 <h1>Microsoft 365 Licensing, Migration and 24/7 Managed Services</h1>
 <p class="lead">Buy, migrate and manage Microsoft 365 with a Microsoft Solutions Partner. Right-sized licenses, planned migrations and M365ProCare managed services.</p>
+<ul class="points">
+<li><b>Right-sized licenses.</b> Pay only for what your team needs.</li>
+<li><b>Planned migrations.</b> Google Workspace and tenant-to-tenant, done in stages.</li>
+<li><b>24/7 M365ProCare support.</b> A team to call after go-live.</li>
+<li><b>Free consultation.</b> Tell us what you need and we respond within 1 business day.</li>
+</ul>
 <div class="cta"><a class="btn b1" href="#lead" data-focus>Book a free consultation</a></div>
 <a class="pdfl" id="pdfBtn" href="ISS-Technologies-Service-Brochure.pdf" download="ISS-Technologies-Service-Brochure.pdf">Download the service brochure (PDF)</a>
 
